@@ -9,6 +9,9 @@ class RoleEnum(str, enum.Enum):
     LIBRARIAN = "librarian"
     MEMBER = "member"
 
+    def __str__(self):
+        return self.value
+
 
 class User(Base):
     __tablename__ = "users"
