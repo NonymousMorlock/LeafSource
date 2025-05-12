@@ -1,6 +1,6 @@
 from sqlalchemy import Integer, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from config.db import Base
+from leafsource.config import Base
 
 class Book(Base):
     __tablename__ = "books"

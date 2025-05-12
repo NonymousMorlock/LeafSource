@@ -1,8 +1,8 @@
 import typer
-from library_app.cli.auth import require_login
-from library_app.config.db import SessionLocal
-from library_app.models.user import User, RoleEnum
-from config.security import hash_password
+from leafsource.cli.auth import require_login
+from leafsource.config import SessionLocal
+from leafsource.models.user import User, RoleEnum
+from leafsource.config import hash_password
 
 user_app = typer.Typer(help="User management (librarian only)")
 

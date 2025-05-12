@@ -1,5 +1,5 @@
 import typer
-from library_app.config.session import login_user, logout_user, get_current_user
+from leafsource.config import login_user, logout_user, get_current_user
 
 auth_app = typer.Typer(help="Authentication commands")
 

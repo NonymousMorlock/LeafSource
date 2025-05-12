@@ -1,9 +1,9 @@
 import typer
-from library_app.config.db import engine, Base
-from library_app.cli.auth import auth_app
-from library_app.cli.user import user_app
-from library_app.cli.book import book_app
-from library_app.cli.borrow import borrow_app
+from leafsource.config import engine, Base
+from leafsource.cli.auth import auth_app
+from leafsource.cli.user import user_app
+from leafsource.cli.book import book_app
+from leafsource.cli.borrow import borrow_app
 
 app = typer.Typer()
 

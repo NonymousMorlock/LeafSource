@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
-from library_app.config.db import SessionLocal
-from library_app.models.user import User
-from library_app.config.security import verify_password
+from leafsource.config import SessionLocal
+from leafsource.models.user import User
+from leafsource.config import verify_password
 
 SESSION_FILE = Path.home() / ".library_cli_session.json"
 

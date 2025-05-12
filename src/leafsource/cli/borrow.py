@@ -1,10 +1,10 @@
 import typer
-from library_app.cli.auth import require_login
-from library_app.config.db import SessionLocal
-from library_app.models.borrow import Borrow
-from library_app.models.book import Book
-from library_app.models.user import RoleEnum
-from library_app.cli.user import require_librarian
+
+from leafsource.cli.auth import require_login
+from leafsource.config import SessionLocal
+from leafsource.models.book import Book
+from leafsource.models.borrow import Borrow
+from leafsource.models.user import RoleEnum
 
 borrow_app = typer.Typer(help="Borrowing commands")
 

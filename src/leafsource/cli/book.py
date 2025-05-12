@@ -1,14 +1,14 @@
 import typer
-from library_app.cli.auth import require_login
-from library_app.config.db import SessionLocal
-from library_app.models.book import Book
-from library_app.models.user import RoleEnum
+
+from leafsource.cli.auth import require_login
+from leafsource.config import SessionLocal
+from leafsource.models.book import Book
 
 book_app = typer.Typer(help="Book management commands")
 
 
 def require_librarian():
-    from library_app.cli.user import require_librarian as rl
+    from leafsource.cli.user import require_librarian as rl
     return rl()
 
 @book_app.command()
