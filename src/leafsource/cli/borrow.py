@@ -1,3 +1,5 @@
+from datetime import datetime, UTC
+
 import typer
 
 from leafsource.cli.auth import require_login
@@ -42,7 +44,7 @@ def return_book(borrow_id: int):
         if borrow.returned_at:
             typer.secho("Already returned", fg=typer.colors.YELLOW)
             raise typer.Exit(code=1)
-        borrow.returned_at = datetime.utcnow()
+        borrow.returned_at = datetime.now(UTC)
         borrow.book.copies_available += 1
         db.commit()
         typer.secho(f"Book returned successfully", fg=typer.colors.GREEN)
