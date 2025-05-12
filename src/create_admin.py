@@ -7,8 +7,8 @@ Base.metadata.create_all(bind=engine)
 
 db = SessionLocal()
 admin = User(
-    username="username", # Replace this with your one init
-    hashed_password=hash_password("password"), # Replace this as well
+    username="username",  # Replace this with your one init
+    hashed_password=hash_password("password"),  # Replace this as well
     role=RoleEnum.LIBRARIAN
 )
 db.add(admin)

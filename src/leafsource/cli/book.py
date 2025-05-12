@@ -11,6 +11,7 @@ def require_librarian():
     from leafsource.cli.user import require_librarian as rl
     return rl()
 
+
 @book_app.command()
 def add_book(title: str, author: str, isbn: str, copies: int = 1):
     """Add a new book to catalog"""
@@ -23,6 +24,7 @@ def add_book(title: str, author: str, isbn: str, copies: int = 1):
         typer.secho(f"Added book '{title}' (id={book.id})", fg=typer.colors.GREEN)
     finally:
         db.close()
+
 
 @book_app.command()
 def remove_book(book_id: int):
@@ -39,6 +41,7 @@ def remove_book(book_id: int):
         typer.secho(f"Removed book id={book_id}", fg=typer.colors.YELLOW)
     finally:
         db.close()
+
 
 @book_app.command()
 def list_books(show_all: bool = typer.Option(False, "--all", help="Show even unavailable books")):

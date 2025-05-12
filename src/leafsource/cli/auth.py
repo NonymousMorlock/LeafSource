@@ -1,4 +1,5 @@
 import typer
+
 from leafsource.config import login_user, logout_user, get_current_user
 
 auth_app = typer.Typer(help="Authentication commands")
@@ -28,6 +29,7 @@ def require_login():
         typer.secho("You must be logged in to perform this action", fg=typer.colors.RED)
         raise typer.Exit(code=1)
     return user
+
 
 @auth_app.command(name="whoami")
 def whoami():

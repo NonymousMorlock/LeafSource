@@ -10,6 +10,7 @@ from leafsource.models.user import RoleEnum
 
 borrow_app = typer.Typer(help="Borrowing commands")
 
+
 @borrow_app.command()
 def borrow_book(book_id: int):
     """Borrow a book by its ID"""
@@ -31,6 +32,7 @@ def borrow_book(book_id: int):
     finally:
         db.close()
 
+
 @borrow_app.command()
 def return_book(borrow_id: int):
     """Return a borrowed book by borrow record ID"""
@@ -50,6 +52,7 @@ def return_book(borrow_id: int):
         typer.secho(f"Book returned successfully", fg=typer.colors.GREEN)
     finally:
         db.close()
+
 
 @borrow_app.command()
 def list_borrows(all: bool = typer.Option(False, "--all", help="Include returned records")):

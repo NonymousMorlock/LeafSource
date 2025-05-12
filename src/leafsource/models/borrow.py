@@ -1,6 +1,8 @@
+from datetime import datetime, UTC
+
 from sqlalchemy import Integer, ForeignKey, DateTime
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from datetime import datetime, UTC
+
 from leafsource.config import Base
 
 
