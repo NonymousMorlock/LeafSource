@@ -1,4 +1,6 @@
-bcrypt==4.3.0
-passlib==1.7.4
+-r constraints.txt
+passlib[bcrypt]==1.7.4
+setuptools==80.4.0
 SQLAlchemy==2.0.40
 typer==0.15.3
+click==8.0.4
